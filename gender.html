@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+        
+        body {
+            font-family: 'Dancing Script', cursive;
+            background: #FEE0E2;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            transition: filter 0.3s;
+            position: relative;
+        }
+        h1 {
+            color: #ff4d6d;
+            font-size: 58px;
+        }
+        p {
+            font-size: 30px;
+            color: #000;
+        }
+        .heart {
+            font-size: 40px;
+            color: red;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #ff4d6d;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background: #d43f5e;
+        }
+        .love-letter {
+            background: #FFF5E1;
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid #D2691E;
+            width: 60%;
+            margin: 20px auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .gender-selection {
+            margin-top: 0px;
+            margin-bottom: 28px;
+            font-size: 34px;
+        }
+        .gender-selection select {
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: 2px solid #ff4d6d;
+            background: white;
+            color: #000;
+        }
+        .proceed-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 20px;
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function proceed() {
+            var gender = document.getElementById('gender').value;
+            if (gender === 'male') {
+                window.location.href = '/If_male.html'; // Add the actual link later
+            } else if (gender === 'female') {
+                window.location.href = '/If_female.html'; // Add the actual link later
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Let's Know each other... <span class="heart">❤</span></h1>
+    <div class="love-letter">
+        <p> <!-- Add your text here later --> </p>
+        <div class="gender-selection">
+            <label for="gender">Are you male or female?</label>
+            <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <button class="proceed-button" onclick="proceed()">Proceed</button>
+        </div>
+    </div>
+</body>
+</html>
