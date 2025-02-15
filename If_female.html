@@ -88,9 +88,15 @@
                 font-size: 40px;
             }
 
-            .button_ans{
+            
+            .button-container {
+                display: flex;
+                justify-content: center;
+                gap: 20px; /* Adds space between buttons */
                 margin-top: 20px;
-                margin-left: 340px;
+            }
+
+            .button_ans, .button_ans1 {
                 padding: 15px 30px;
                 background: #ff4d6d;
                 color: white;
@@ -98,18 +104,10 @@
                 font-size: 24px;
                 border-radius: 10px;
                 transition: 0.3s;
+                text-align: center;
+                width: fit-content; /* Adjust width to content */
             }
-            .button_ans1{
-                margin-top: 20px;
-                margin-left: 100px;
-                padding: 15px 30px;
-                background: #ff4d6d;
-                color: white;
-                text-decoration: none;
-                font-size: 24px;
-                border-radius: 10px;
-                transition: 0.3s;
-            }
+
         }
 
         .overlay {
@@ -121,8 +119,34 @@
             visibility: hidden;
             transition: opacity 2s ease-in-out;
         }
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 8vw;  /* Scale heading */
+            }
+            h3 {
+                font-size: 5vw;
+            }
+            p, pre {
+                font-size: 4vw; 
+                max-width: 90%;
+                white-space: normal; 
+                word-wrap: break-word;
+            }
+            .love-letter {
+                width: 90%;
+                padding: 10px 20px;
+                font-size: 3.5vw;
+            }
+            .button-container {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .button_ans, .button_ans1 {
+                font-size: 3vw;
+                padding: 10px 20px;
+            }
+        }
 
-        
     </style>
 </head>
 <body >
@@ -156,17 +180,19 @@
             <hr color="#e7e5e4">  
             <pre>With Me, Every Day is Valentine’s Day...❤️  </pre>
             <p>So will you give me a chance ?</p>
-           
-            <button class = "button_ans " id="playButton">No!</button>
-            <div class="overlay" id="overlay"></div>
-            <audio id="audio" src="#"></audio>
-           
+            <div class="button-container">
+                <button class = "button_ans " id="playButton">No!</button>
+                <a href="Ans_Yes.html" class ="button_ans1">yes</a>
+            </div>
+        <!-- <audio id="audio" src="#"></audio> -->        
+        <div class="overlay" id="overlay"></div>
+
     <script>
         document.getElementById('playButton').addEventListener('click', function() {
             const overlay = document.getElementById('overlay');
-            const audio = document.getElementById('audio');
+            // const audio = document.getElementById('audio');
             
-            audio.play(); // Start playing audio
+            // audio.play(); // Start playing audio
             overlay.style.visibility = 'visible';
             overlay.style.opacity = '1';
             
@@ -176,7 +202,6 @@
             }, 4000);
         });
     </script>
-            <a href="Ans_Yes.html" class ="button_ans1">yes</a>
         
     </div>
 
