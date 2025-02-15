@@ -5,55 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #meme_brother{
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            outline: solid; 
-               
-        } 
-        .div_2{
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%); 
-            font-size: 50px;
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 10px;
         }
-        .p{
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-        a:link{
-            color: black;
-        }
-        a:visited{
-            color: grey;
-        }
-        a:hover{
-            font-weight: 600;
-            font-size: 18px;
-            color: black;
 
+        #meme_brother {
+            width: 90%;
+            max-width: 600px;
+            height: auto;
+            border: 3px solid black;
         }
-        a:active{
-            color:darkslateblue;
+
+        .div_2 {
+            font-size: 4vw;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        a {
+            display: inline-block;
+            font-size: 3vw;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 600px) {
+            .div_2 {
+                font-size: 5vw;
+            }
+            
+            a {
+                font-size: 4vw;
+            }
         }
     </style>
 </head>
 <body>
-    <div>
-        <video src ="eww brother.mp4" height = "500px"  autoplay loop id ="meme_brother"></video>
-    </div>
-    <br>
-    <div class = "div_2">
-        <p> <!-- put some style onto the text here -->
-            Ew brother , I am not interested in boys >_<
-        </p>
-    </div>
-    <div>
-        <a href="gender.html" > << Go back</a>
+    <video src="eww brother.mp4" autoplay loop id="meme_brother"></video>
 
+    <div class="div_2">
+        <p>Ew brother, I am not interested in boys >_<</p>
     </div>
 
+    <a href="gender.html">&lt;&lt; Go back</a>
 </body>
 </html>
